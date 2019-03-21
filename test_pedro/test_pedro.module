@@ -3,11 +3,11 @@
 function test_pedro_menu() {
   $items = array();
 
-  $items['test_pedro/test_pedro'] = array( //this creates a URL that will call this form at "examples/form-example"
-    'title' => 'Test de Pedro', //page title
+  $items['test_pedro/test_pedro'] = array( 
+    'title' => 'Test de Pedro', 
     'description' => 'Un módulo de prueba',
-    'page callback' => 'drupal_get_form', //this is the function that will be called when the page is accessed.  for a form, use drupal_get_form
-    'page arguments' => array('test_pedro_form'), //put the name of the form here
+    'page callback' => 'drupal_get_form', 
+    'page arguments' => array('test_pedro_form'), 
     'access callback' => 'user_is_logged_in',
 	'type' => MENU_NORMAL_ITEM
   );
@@ -19,7 +19,7 @@ function test_pedro_form($form, &$form_state) {
   
   $form['submit_button'] = array(
     '#type' => 'submit',
-    '#value' => t('Click Here!'),
+    '#value' => t('Ir a bienvenida'),
   );
 
   $form['#submit'][] = 'test_pedro_form_submit';
