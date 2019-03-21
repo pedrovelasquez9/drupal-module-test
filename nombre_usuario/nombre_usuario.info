@@ -1,0 +1,4 @@
+name = Nombre Usuario
+description = Módulo de prueba con Drupal
+core = 7.x
+package = My Modules

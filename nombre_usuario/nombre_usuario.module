@@ -1,0 +1,21 @@
+<?php
+
+function nombre_usuario_menu() {
+
+  $items = array();
+global $user;
+  $items['nombre_usuario/nombre_usuario'] = array(
+    'title' => 'Bienvenido', 
+    'page callback' => 'nombre_usuario_void', 
+    'access arguments' => array('nombre_usuario_void'), 
+    'type' => MENU_CALLBACK,
+	'access callback' => TRUE,
+    );
+
+  return $items;
+}
+
+function nombre_usuario_void() {
+	global $user;
+	return $user->name;
+}
